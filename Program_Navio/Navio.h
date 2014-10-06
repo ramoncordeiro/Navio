@@ -1,12 +1,7 @@
-/* 
- * File:   Navio.h
- * Author: Asus
- *
- * Created on 5 de Outubro de 2014, 21:11
- */
-
 #ifndef NAVIO_H
 #define	NAVIO_H
+#include<iostream>
+using namespace std;
 
 class Navio {
 public:
@@ -14,7 +9,7 @@ public:
     Navio(const Navio& orig);
     virtual ~Navio();
 private:
-
+    string modelo;
 };
 
 #endif	/* NAVIO_H */
