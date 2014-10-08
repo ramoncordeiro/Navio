@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=program_navio
+PROJECTNAME=Program_Navio
 
 # Active Configuration
 DEFAULTCONF=Debug

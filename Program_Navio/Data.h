@@ -3,17 +3,15 @@
 
 class Data {
 public:
-    Data();
-    Data(const Data& orig);
-    virtual ~Data();
-    
-    Data(int =1); mes =1, ano, 1000);
+       
+    Data(int =1, int =1, int= 1900);
+    void print() const;
 private:
     int dia;
     int mes;
-    int ano
+    int ano;
             
-   
+    int VerificaDia(int) const; 
 };
 
 #endif	/* DATA_H */
