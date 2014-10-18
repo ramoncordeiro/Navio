@@ -7,6 +7,9 @@ using namespace std;
 #include <vector>
 
 int main(int argc, char** argv) {
+    vector<int> v1; //para exemplo push_back
+    
+    
     cout <<"Inicio do Programa"<<"\n";
     //As duas primeiras linhas abaixo, são modificações para a versão do Branch: Edição
     Navio *nv0 = new Navio("Guerra 0",Data (12,6,1945)); //Alocando dinamicamente Novo navio
@@ -32,7 +35,9 @@ int main(int argc, char** argv) {
     cout<<"X ="
             X.print();
     
-   
+   //exemplo vetor push_back
+    if (v1.max_size(0))
+        v1.push_back(1);
     
     return 0;
     
