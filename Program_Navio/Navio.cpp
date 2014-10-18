@@ -3,9 +3,55 @@ using std::cout;
 
 #include "Data.h"
 #include "Navio.h"
+#include <vector>
+
 
 int Navio::frota =0;
 const Data Navio::FAB = Data(4,4,1942);// Data fabricação.
+
+
+
+/*Nova função acrescentada Para a branch Edição. Sobrecarga no Construtor
+Navio::Navio(string nm,static string mod,int est, int lat,int longe,int combus,int h_nave, Data t_atual){
+    nome = nm;
+    modelo = mod;
+    Estado = est;
+    Local_Lat = lat;
+    Local_Long = longe;
+    Qtd_Combustivel = combus;
+    Horas_navegadas = h_nave;
+    atual = t_atual;
+} */
+
+
+// Nova Função adicionada para a branch Edição.
+
+Navio::Navio(){
+    num_tripulantes = 0;
+}
+
+Navio::Navio(int tripu){
+    num_tripulantes = tripu;
+    }
+
+void Navio::print(){
+    cout<<"Numero de tripulantes e: " <<num_tripulantes <<endl;
+}
+// Nova funcao adicionada na versão Branch: Edição
+
+
+
+
+Navio Navio::operator=(Navio nv){
+    Navio aux;
+    aux.num_tripulantes = num_tripulantes + Navio.num_tripulantes;
+    return aux;
+}
+
+    Navio::Navio(Navio nv){
+    Navio aux;
+    aux.nome = nv.nome;
+}
 
 Navio::Navio() 
 :nome("Marinha"),modelo("BRA-2Guerra"),Estado(0),
@@ -38,7 +84,7 @@ Navio::Navio(string nom,const Data &dat)
     Horas_navegadas++;
 }
 Navio::~Navio() {
-}
+        }
 void Navio::Ano_Fab_frota()
 {
     cout<<"O ano de fabricacao deste navio e:",FAB.print();
@@ -46,8 +92,8 @@ void Navio::Ano_Fab_frota()
 }
 
 void Navio::batalhas() const {
-    cout << "As paginas visitas foram\n";
-for(unsigned int i = 0; i < batalha.size(); i++)
+    cout << "Total de batalhas\n";
+for(int i = 0; i < batalha.size(); i++)
 cout << batalha[i] << '\n';
 }
 
@@ -58,7 +104,10 @@ void Navio::anos_uso() const {
 
 void Navio::Quantidade_Combustive(){
     cout<<"A quantidade de combustivel e"<<'\n'<<Qtd_Combustivel<<endl;
+    
 }
+
+
 
 void Navio::horasNavegacao()
 {

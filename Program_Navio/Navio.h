@@ -7,30 +7,17 @@ using std::vector;
 #include <string>
 using std::string;
 
-
 #include "Data.h"
 
 class Navio {
+    friend ostream &operator<<( ostream &, const Navio &); //Inserido Branch Edicao.
+    friend istream &operator<< ( istream &, const Navio & ); //Inserido Branch Edicao.
+    
 public:
     Navio();
     Navio(const Navio &);
-    Navio(int, const Data & = Data(4,6,1942));
+    Navio(string nome, const Data & = Data(4,6,1942));
     ~Navio();
-    
-    //int getNome();
-    //void setNome(string);
-    //static modelo()const; // Analisar esse Caso, p qndo objeto criado se pode modificar
-    
-    //int getQuantidade_Combustivel();
-    
-    //void setHoras_navegadas();
-    //int getHoras_navegadas();
-    //void setLocal_Lat(int);
-    //int getLocal_lat();
-    //void setLocal_long(int);
-    //int Local_long();
-    //int getEstado();
-    //void setEstado(int);
     
     void horasNavegacao();
     void Quantidade_Combustive();
@@ -38,6 +25,13 @@ public:
     void batalhas()const;
     void anos_uso()const;
     void localizacao(); //Funcao exemplo. Nao sei como implementar.
+    
+    
+    //Metodos inseridos para exemplificar sobrecarga. Esses metodos estão na versão Branch: Edição
+    Navio::Navio();//construtor para tripulantes
+    Navio( int tripu);
+    Navio operator =(Navio nv);
+    void print();
     
     
 private:
@@ -52,7 +46,8 @@ private:
     const static Data FAB; // Data de Fabricação do Navio.
     vector<string> batalha;
     Data atual;
-    
+    int num_tripulantes; //Add para fazer versão o Branch Edicao
+                         //Esta ultima variavel foi inserida para exemplificar sobrecarga
 };
 
 #endif	/* NAVIO_H */
