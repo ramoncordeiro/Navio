@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Armamento.o \
 	${OBJECTDIR}/Data.o \
 	${OBJECTDIR}/Navio.o \
 	${OBJECTDIR}/Tripulantes.o \
@@ -64,6 +65,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/program_navio.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/program_navio ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/Armamento.o: Armamento.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Armamento.o Armamento.cpp
 
 ${OBJECTDIR}/Data.o: Data.cpp 
 	${MKDIR} -p ${OBJECTDIR}
