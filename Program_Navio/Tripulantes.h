@@ -13,7 +13,7 @@ private:
     int id; // Essa variavel seria algo como Numero de alistamento, ou matricula Militar
     string nome_t;
     string cargo; //função/serviço que o tripulante desempenha na embarcação. 
-    int num_tripulantes;
+    int qtd_tripulantes;
 };
 
 #endif	/* TRIPULANTES_H */
