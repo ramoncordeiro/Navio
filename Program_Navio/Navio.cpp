@@ -3,6 +3,7 @@ using std::cout;
 
 #include "Data.h"
 #include "Navio.h"
+#include "Tripulantes.h"
 #include <vector>
 
 
@@ -28,6 +29,7 @@ Navio::Navio(string nm,static string mod,int est, int lat,int longe,int combus,i
 
 Navio::Navio(){
     num_tripulantes = 0;
+        
 }
 
 Navio::Navio(int tripu){

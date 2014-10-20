@@ -8,6 +8,8 @@ using std::vector;
 using std::string;
 
 #include "Data.h"
+#include "Tripulantes.h"
+#include "Armamento.h"
 
 class Navio {
     friend ostream &operator<<( ostream &, const Navio &); //Inserido Branch Edicao.
@@ -48,6 +50,7 @@ private:
     Data atual;
     int num_tripulantes; //Add para fazer versão o Branch Edicao
                          //Esta ultima variavel foi inserida para exemplificar sobrecarga
+    
 };
 
 #endif	/* NAVIO_H */
