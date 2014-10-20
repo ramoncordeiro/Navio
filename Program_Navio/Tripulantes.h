@@ -11,7 +11,7 @@ public:
     virtual ~Tripulantes();
     
     int getNovoTripulante();
-    void setNovoTripulante(int ide,string nom,string carg);
+    void setNovoTripulante(int ide,string nom,string carg); //pssado variaveis ident,nome,cargo
     int getQtd_tripulantes();
     void setQtd_tripulantes(int tota_tripu);
 private:

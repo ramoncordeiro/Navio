@@ -11,9 +11,9 @@ public:
     Armamento(const string tipo,const int quantidade);
     virtual ~Armamento();
  
-    void setTipo(string tip);
+    void setTipo(string tip);//passado variavel tipo como parametro
     string getTipo();
-    void setQuantidade_arma(int quant);
+    void setQuantidade_arma(int quant); //passado variavel quantidade como parametro
     int getQuantidade_arma();
     
 private:

@@ -4,6 +4,8 @@ using namespace std;
 
 #include "Navio.h"
 #include "Data.h"
+#include "Armamento.h"
+#include "Tripulantes.h"
 #include <vector>
 
 int main(int argc, char** argv) {
@@ -39,7 +41,7 @@ int main(int argc, char** argv) {
     if (v1.max_size(0))
         v1.push_back(1);
     
-    return 0;
+   return 0;
     
     
     
