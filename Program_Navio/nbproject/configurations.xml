@@ -56,6 +56,10 @@
       </item>
       <item path="Navio.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="PortaAviao.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PortaAviao.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Tripulantes.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Tripulantes.h" ex="false" tool="3" flavor2="0">
@@ -94,6 +98,10 @@
       <item path="Navio.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Navio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PortaAviao.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PortaAviao.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Tripulantes.cpp" ex="false" tool="1" flavor2="0">
       </item>
