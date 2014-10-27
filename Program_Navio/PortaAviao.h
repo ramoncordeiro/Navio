@@ -31,8 +31,8 @@ Requisitos de implementação
 
 Terceira Atividade
 
-Alocação dinâmica de memória. A memória é desalocada?
-fried Operator<<
+Alocação dinâmica de memória. A memória é desalocada? (1/2)
+fried Operator<< X
 Operator=
 vector push_back
  
@@ -48,10 +48,10 @@ Os próximos trabalhos só serão avaliados se esses passos forem seguidos (ou s
  
      Requisitos para quarta tarefa: 
         Diagrama de classes (obrigatório salvar também o png do diagrama no gitHub)
-        Herança pública
+        Herança pública X
         Construtor de cópia, e sobrecargas dos operadores de atribuição (=) e << (cout << base) para a classe base e derivada
         Usar Protected acessando diretamente os atributos na classe derivada
-        Alocação dinâmica de memória na classe base e derivada
+        Alocação dinâmica de memória na classe base e derivada X
         Sobrescrita de método: chamar dentro do método da classe derivada o método correspondente da classe base usando ::
         No main: criar um ponteiro da classe base para alocar memória para a classe derivada e chamar os vários métodos implementados
  
@@ -67,9 +67,9 @@ Os próximos trabalhos só serão avaliados se esses passos forem seguidos (ou s
 #include "Data.h"
 #include <string>
 
-class PortaAviao:protected Navio {
+class PortaAviao:public Navio {
 public:
-    PortaAviao();
+    PortaAviao(string nome,string modelo,int Estado,int Qtd_Combustivel,int Horas_navegadas, Data atual,int qtdAviao,const int pistapartida,const int pistachegada,const static string mensagem, const char pais,Data chegada);
     PortaAviao(const PortaAviao &);
     virtual ~PortaAviao();
 
@@ -82,7 +82,7 @@ int getpistachegada(); //X
 inline const string mensagem(string *mensagem){this->mensagem = "Marinha"; return mensagem;} //X
 const void setpais(char pais[30]); //X
 char getpais(); //X
-static Data setchegada(Data chegada); //X
+friend static Data setchegada(Data chegada); //X
 Data getchegada(); //X
 private:
     //As variaveis foram declaradas com base em vídeos sobre esse tipo de embarcação.
@@ -91,7 +91,7 @@ private:
     const int pistapartida;
     const int pistachegada;
     const static string mensagem; // Mensagem :Marinha
-    char const pais[30]; // Esse atributo mostra o Pais de origem da Embarcacao
+    const char  pais[30]; // Esse atributo mostra o Pais de origem da Embarcacao
     Data chegada; //data em que o aviao chegou na embarcacao.
 };
 

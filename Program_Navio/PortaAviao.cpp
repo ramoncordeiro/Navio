@@ -2,9 +2,16 @@
 
 PortaAviao::mensagem = "Marinha do Brasil";
 
-PortaAviao::PortaAviao() {
-}
 
+
+PortaAviao(string nome,string modelo,int Estado,int Qtd_Combustivel,int Horas_navegadas, Data atual,int qtdAviao,const int pistapartida,const int pistachegada,const static string mensagem, const char pais,Data chegada){
+    Navio(nome,modelo,Estado,Qtd_combustivel,Horas_navegadas,atual);
+    setqtdAviao(qtdAviao);
+    setpais(pais);
+    setchegada(chegada);
+    
+    
+}
 PortaAviao::PortaAviao(const PortaAviao& orig) {
 }
 
@@ -12,6 +19,7 @@ PortaAviao::~PortaAviao() {
 }
 
 void setqtdAviao(int qtdAviao){
+    cout<<"inserindo novo aviao\n";
     this->qtdAviao = qtdAviao;
 }
 
@@ -27,7 +35,7 @@ int getpistapartida(){
     return pistapartida;
 }
 const void setpistachegada(int pistachegada){
-    this->pistachegada;
+    this->pistachegada =1;
 }
 int getpistachegada(){
     return pistachegada;
@@ -40,7 +48,7 @@ const void setpais(char pais[30]){
 char getpais(){
     return pais;
 }
-static Data chegada(Data chegada){
+friend static Data setchegada(Data chegada){
     cout<<"Insira a data em que o aviao foi adicionado a frota";
     this->chegada = chegada;
 }
