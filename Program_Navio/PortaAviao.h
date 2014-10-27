@@ -1,26 +1,32 @@
+/*IDÉIA DA CLASSE PORTAAVIAO: CRIAR UMA CLASSE QUE HERDE DE NAVIO OS ATRIBUTOS
+  E, QUE possua suas próprias caracteristicas 
+ PortaAviao é um tipo diferenciaod de embarcação que transporta os aviões de um determinado País 
+ em Guerra,então esta classe terá essa caracteristica.  */
+
+
 /*
  Requisitos funcionais
 Todos os atributos e funções membros devem estar relacionados a classe
   
 
     Pelo menos 4 atributos X
-    Pelo menos 4 funções membros sem incluir get e set
+    Pelo menos 4 funções membros sem incluir get e set X
 
 
 Requisitos de implementação
 
-    Todos os atributos devem ser inicializados. Fez validação de dados
+    Todos os atributos devem ser inicializados. Fez validação de dados X
     Três construtores, incluindo um construtor de cópia e construtor com parâmetros defaults. Verifica alocação dentro do construtor de cópia.
-    Deve ter um atributo string
-    Um atributo static. Correta modelagem dos statics?
-    Um atributo const static
-    Dois métodos constantes (não pode ser get)
-    Um array
-    Uma função inline (não pode ser get ou set)
-    Método com passagem por referência usando ponteiro
-    Método static – deve ser chamado no main
-    Composição com a classe Data. Fez uso do objeto criado?
-    O que é const deve ser const.
+    Deve ter um atributo string X
+    Um atributo static. Correta modelagem dos statics? X
+    Um atributo const static X
+    Dois métodos constantes (não pode ser get) (2/2) X
+    Um array X
+    Uma função inline (não pode ser get ou set) X
+    Método com passagem por referência usando ponteiro X
+    Método static – deve ser chamado no main X
+    Composição com a classe Data. Fez uso do objeto criado? X
+    O que é const deve ser const.X
 
 
 Terceira Atividade
@@ -61,20 +67,32 @@ Os próximos trabalhos só serão avaliados se esses passos forem seguidos (ou s
 #include "Data.h"
 #include <string>
 
-class PortaAviao {
+class PortaAviao:protected Navio {
 public:
     PortaAviao();
     PortaAviao(const PortaAviao &);
     virtual ~PortaAviao();
 
-void setqtdAviao(int qtdAviao);
-int getqtdAviao();
-
+void setqtdAviao(int qtdAviao); //X
+int getqtdAviao(); //X
+const void setpistapartida(int pistapartida);//X
+int getpistapartida(); //X
+const void setpistachegada(int pistachegada); //X
+int getpistachegada(); //X
+inline const string mensagem(string *mensagem){this->mensagem = "Marinha"; return mensagem;} //X
+const void setpais(char pais[30]); //X
+char getpais(); //X
+static Data setchegada(Data chegada); //X
+Data getchegada(); //X
 private:
+    //As variaveis foram declaradas com base em vídeos sobre esse tipo de embarcação.
+    //Alguns modelos possuem 2 pistas de partida ( menores) e 1 de pouso (Maior)
     int qtdAviao;
-    int pistapartida;
-    int pistachegada;
-    string mensagem; // Mensagem :Marinha do Brasil
+    const int pistapartida;
+    const int pistachegada;
+    const static string mensagem; // Mensagem :Marinha
+    char const pais[30]; // Esse atributo mostra o Pais de origem da Embarcacao
+    Data chegada; //data em que o aviao chegou na embarcacao.
 };
 
 #endif	/* PORTAAVIAO_H */
