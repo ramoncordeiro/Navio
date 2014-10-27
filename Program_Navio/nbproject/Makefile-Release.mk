@@ -38,7 +38,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/Armamento.o \
 	${OBJECTDIR}/Data.o \
 	${OBJECTDIR}/Navio.o \
-	${OBJECTDIR}/PortaAviao.o \
 	${OBJECTDIR}/Tripulantes.o \
 	${OBJECTDIR}/main.o
 
@@ -81,11 +80,6 @@ ${OBJECTDIR}/Navio.o: Navio.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Navio.o Navio.cpp
-
-${OBJECTDIR}/PortaAviao.o: PortaAviao.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PortaAviao.o PortaAviao.cpp
 
 ${OBJECTDIR}/Tripulantes.o: Tripulantes.cpp 
 	${MKDIR} -p ${OBJECTDIR}
