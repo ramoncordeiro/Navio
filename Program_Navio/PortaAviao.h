@@ -59,7 +59,7 @@ Os próximos trabalhos só serão avaliados se esses passos forem seguidos (ou s
 #define	PORTAAVIAO_H
 #include "Navio.h"
 #include "Data.h"
-
+#include <string>
 
 class PortaAviao {
 public:
@@ -74,7 +74,7 @@ private:
     int qtdAviao;
     int pistapartida;
     int pistachegada;
-    
+    string mensagem; // Mensagem :Marinha do Brasil
 };
 
 #endif	/* PORTAAVIAO_H */
