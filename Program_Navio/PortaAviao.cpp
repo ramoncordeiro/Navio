@@ -5,17 +5,21 @@ PortaAviao::mensagem = "Marinha do Brasil";
 
 
 PortaAviao(string nome,string modelo,int Estado,int Qtd_Combustivel,int Horas_navegadas, Data atual,int qtdAviao,const int pistapartida,const int pistachegada,const static string mensagem, const char pais,Data chegada){
-    Navio(nome,modelo,Estado,Qtd_combustivel,Horas_navegadas,atual);
+    Navio(nome,modelo,Estado,Qtd_Combustivel,Horas_navegadas,atual);
     setqtdAviao(qtdAviao);
     setpais(pais);
     setchegada(chegada);
     
     
 }
-PortaAviao::PortaAviao(const PortaAviao& orig) {
+PortaAviao::PortaAviao(const PortaAviao &PortaAviaoCopia):Navio(PortaAviaoCopia) {
 }
 
-PortaAviao::~PortaAviao() {
+PortaAviao::~PortaAviao(string nome,string modelo,int Estado,int Qtd_Combustivel,int Horas_navegadas, Data atual,int qtdAviao,const int pistapartida,const int pistachegada,const static string mensagem, const char pais,Data chegada) {
+    Navio(nome,modelo,Estado,Qtd_Combustivel,Horas_navegadas,atual);
+    setqtdAviao(qtdAviao);
+    setpais(pais);
+    setchegada(chegada);
 }
 
 void setqtdAviao(int qtdAviao){

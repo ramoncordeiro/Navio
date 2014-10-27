@@ -31,7 +31,7 @@ Requisitos de implementação
 
 Terceira Atividade
 
-Alocação dinâmica de memória. A memória é desalocada? (1/2)
+Alocação dinâmica de memória. A memória é desalocada? (2/2) X
 fried Operator<< X
 Operator=
 vector push_back
@@ -50,7 +50,7 @@ Os próximos trabalhos só serão avaliados se esses passos forem seguidos (ou s
         Diagrama de classes (obrigatório salvar também o png do diagrama no gitHub)
         Herança pública X
         Construtor de cópia, e sobrecargas dos operadores de atribuição (=) e << (cout << base) para a classe base e derivada
-        Usar Protected acessando diretamente os atributos na classe derivada
+        Usar Protected acessando diretamente os atributos na classe derivada X
         Alocação dinâmica de memória na classe base e derivada X
         Sobrescrita de método: chamar dentro do método da classe derivada o método correspondente da classe base usando ::
         No main: criar um ponteiro da classe base para alocar memória para a classe derivada e chamar os vários métodos implementados
@@ -70,8 +70,8 @@ Os próximos trabalhos só serão avaliados se esses passos forem seguidos (ou s
 class PortaAviao:public Navio {
 public:
     PortaAviao(string nome,string modelo,int Estado,int Qtd_Combustivel,int Horas_navegadas, Data atual,int qtdAviao,const int pistapartida,const int pistachegada,const static string mensagem, const char pais,Data chegada);
-    PortaAviao(const PortaAviao &);
-    virtual ~PortaAviao();
+    PortaAviao(const PortaAviao &PortaAviaoCopia):Navio(PortaAviaoCopia);
+    virtual ~PortaAviao(string nome,string modelo,int Estado,int Qtd_Combustivel,int Horas_navegadas, Data atual,int qtdAviao,const int pistapartida,const int pistachegada,const static string mensagem, const char pais,Data chegada);
 
 void setqtdAviao(int qtdAviao); //X
 int getqtdAviao(); //X
