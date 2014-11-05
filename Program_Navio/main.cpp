@@ -1,26 +1,30 @@
-#include <cstdlib>
-#include<iostream>
+#include <iostream>
 using namespace std;
+#include <vector>
+#include <string>
 
+#include <cstdlib>
 #include "Navio.h"
+#include "NavioMilitar.h"
+#include "Destroyer.h"
 #include "Data.h"
-/*
- * 
- */
+#include "VarredorMina.h"
+#include "PortaAviao.h"
+
+
+
+
 int main(int argc, char** argv) {
-    cout <<"Inicio do Programa"<<"\n";
-    Navio nv1("Guerra1",Data(12,6,1945));
-    Navio::Ano_Fab_frota();
-    cout<<'\n';
-    Navio::anos_uso();
-    cout<<'\n';
-    Navio::batalhas();
-    cout<<'\n';
+    Navio *portaAviao = new PortaAviao("porta1");
+    Navio *destruidor = new Destroyer ("Destruidor1")
+    Navio *varredorMina = new VarredorMina("Varredor Mina1");
     
-    Navio::horasNavegacao();
-    cout<<'\n';
-    Navio nv2(nv1);
+    delete portaaviao;
+    delete destruidor;
+    delete varredorMina
+    
     return 0;
-    
 }
+    
+    
 
