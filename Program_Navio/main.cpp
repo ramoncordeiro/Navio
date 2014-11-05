@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-#include "Navio.h"
+#include "NavioMilitar.h"
 #include "Data.h"
 #include "Armamento.h"
 #include "Tripulantes.h"

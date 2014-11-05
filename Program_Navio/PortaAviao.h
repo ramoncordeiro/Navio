@@ -63,7 +63,7 @@ Os próximos trabalhos só serão avaliados se esses passos forem seguidos (ou s
 
 #ifndef PORTAAVIAO_H
 #define	PORTAAVIAO_H
-#include "Navio.h"
+#include "NavioMilitar.h"
 #include "Data.h"
 #include <string>
 

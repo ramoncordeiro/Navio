@@ -2,13 +2,13 @@
 using std::cout;
 
 #include "Data.h"
-#include "Navio.h"
+#include "NavioMilitar.h"
 #include "Tripulantes.h"
 #include <vector>
 
 
 int Navio::frota =0;
-const Data Navio::FAB = Data(4,4,1942);// Data fabricação.
+const Data ::FAB = Data(4,4,1942);// Data fabricação.
 
 
 
@@ -99,15 +99,6 @@ for(int i = 0; i < batalha.size(); i++)
 cout << batalha[i] << '\n';
 }
 
-
-void Navio::anos_uso() const {
-    cout<< "Este navio esteve em uso",(atual-FAB).print();
-}
-
-void Navio::Quantidade_Combustive(){
-    cout<<"A quantidade de combustivel e"<<'\n'<<Qtd_Combustivel<<endl;
-    
-}
 
 
 
