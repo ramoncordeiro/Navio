@@ -29,9 +29,9 @@ public:
     
     //FUNÇÕES DA CLASSE NAVIO
     
-    void setEstado(int Estado);
-    int getEstado();
-    void batalhas()const;
+  virtual  void setEstado(int Estado);
+   virtual int getEstado();
+   virtual void batalhas()const;
     
     
     

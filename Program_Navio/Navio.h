@@ -100,20 +100,20 @@ public:
     
     // ------------------------ FUNCOES-------------------
       //funções de validação e inserção.
-    void setNome(string nome);
-    string getNome();
-    void setCombustivel(int qtdCombustivel);
-    int getCombustivel();
-    void setdataFabFrota(Data FabFrota);
-    Data getdataFabFrota();
-    void setPais(const static string pais);
-    string getPais();
+   virtual void setNome(string nome);
+    virtual string getNome();
+   virtual void setCombustivel(int qtdCombustivel);
+   virtual int getCombustivel();
+   virtual void setdataFabFrota(Data FabFrota);
+    virtual Data getdataFabFrota();
+   virtual void setPais(const static string pais);
+    virtual string getPais();
     
-    string tripulacao (vector tripulacao);
-    void qtdCombustivel(); // ESSA FUNÇÃO FAZ A MEDIDA DE COMBUSTIVEL APÓS OS USOS.
-    const static void AnoFabFrota();
-    void anosemUso()const;
-    void horasNavegacao;
+   virtual string tripulacao (vector tripulacao);
+  virtual  void qtdCombustivel(); // ESSA FUNÇÃO FAZ A MEDIDA DE COMBUSTIVEL APÓS OS USOS.
+  virtual  const static void AnoFabFrota();
+  virtual  void anosemUso()const;
+  virtual  void horasNavegacao();
 
     
 private:
